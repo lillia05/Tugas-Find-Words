@@ -83,6 +83,22 @@ bool DiagDownRight(char* word){
 }
 
 
+bool DiagDownLeft(char* word){
+    int wordLen = strlen(word);
+    for(int i=0 ; i<24 ; i++){
+        for(int j=0 ; j<24 ; j++){
+            bool found = true;
+            for(int k=0 ; k<wordLen ; k++){
+                if (matrix[i + k][j - k] != word[k]){
+                    found = false;
+                }
+            }
+            if(found){return true;}
+        }
+    }
+    return false;
+}
+
 
 int main(){
     int num;
@@ -99,7 +115,7 @@ int main(){
 
     for(int i = 0; i < num; i++){
         bool found = false;
-        if (Horizontal(words[i]) || Vertical(words[i]) || DiagDownRight(words[i]) ){
+        if (Horizontal(words[i]) || Vertical(words[i]) || DiagDownRight(words[i]) || DiagDownLeft(words[i]) ){
             cout << "Ada" << endl;
         } else {
             cout << "Tidak Ada" << endl;
