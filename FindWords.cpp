@@ -27,6 +27,12 @@ char matrix[24][24] = {
     "HQPYLWHFMNFFUFPSWXNUMMV"
 };
 
+void Kapital(char* str){
+    for(int i = 0; str[i] != '\0'; i++){
+        str[i] = toupper(str[i]);
+    }
+}
+
 bool Horizontal(char* word){
     int wordLen = strlen(word);
     for(int i=0 ; i<24 ; i++){
@@ -69,6 +75,7 @@ int main(){
 
     for(int i=0 ; i<num ; i++){
         cin.getline(words[i], 25);
+        Kapital(words[i]);
     }
 
     for(int i = 0; i < num; i++){
