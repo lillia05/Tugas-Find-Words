@@ -147,7 +147,7 @@ int main(){
 
     for(int i = 0; i < num; i++){
         bool found = false;
-        if (Horizontal(words[i]) || Vertical(words[i]) || DiagUpLeft(words[i]) || DiagUpRight(words[i] || DiagDownRight(words[i]) || DiagDownLeft(words[i]) ){
+        if (Horizontal(words[i]) || Vertical(words[i]) || DiagUpLeft(words[i]) || DiagUpRight(words[i]) || DiagDownRight(words[i]) || DiagDownLeft(words[i]) ){
             cout << "Ada" << endl;
         } else {
             cout << "Tidak Ada" << endl;
